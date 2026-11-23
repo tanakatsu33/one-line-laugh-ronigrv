@@ -1,8 +1,11 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ENTRY =
-  "I unlocked my phone to check the time, and forty minutes later I knew a stranger's wedding menu, the weather in Oslo, and still not the time.";
+const SETUP = "I unlocked my phone to check the time,";
+const PUNCHLINE =
+  "and forty minutes later I knew a stranger's wedding menu, the weather in Oslo, and still not the time.";
+
+const ENTRY = `${SETUP} ${PUNCHLINE}`;
 
 function checkEntry(text: string): void {
   const chars = [...text].length;
